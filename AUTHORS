@@ -1,4 +1,4 @@
-  The Bigram Frequency Text Generator was taken from Nick Brosowsky's commit to Entropy Typing:
+ Lines 45-106 was taken from Nick Brosowsky's commit to Entropy Typing:
   https://github.com/CrumpLab/EntropyTyping/pull/22
   
   The letter frequency code was taken from Peter Norvig's website: https://norvig.com/mayzner.html
