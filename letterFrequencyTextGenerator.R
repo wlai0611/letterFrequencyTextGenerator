@@ -1,3 +1,4 @@
+#Lines 45 to 106 was taken from Nick Brosowsky's commit.  Link Cited in AUTHORS page.
 #RANDOM
 numReps=500
 oneNine=rep(seq(1,9,1),numReps)
