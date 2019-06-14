@@ -9,6 +9,7 @@ If you put in (10,1) you get 10 words of Unigram structure:
 If you put in (10,2) you get 10 words of bigram structure:
       'IBLL', 'DOMPLTED', 'LOMPIDING', 'UNARTER', 'IBLL', 'HECLISSED',
        'CAS', 'USUNTER', 'BANCO', 'C'   A lot of 'ER' and 'ED' because these are common letter pairs.
+
 If you put in (10,3) you get 10 words of trigram structure:
       'EN', 'RAID', 'RESKING', 'EXCHANING', 'E', 'CAPARING', 'UNLICATE',
        'PROPERES', 'RECASSY', 'MAY'    A lot of 'ING' because this is a common trio in English.
