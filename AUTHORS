@@ -1,4 +1,8 @@
- Lines 45-106 was taken from Nick Brosowsky's commit to Entropy Typing:
+ The text generator uses probabilites (gram1prob.csv,gram2prob.csv,gram3prob.csv) from a probability chart that was precomputed and is imported
+ during the function call.  
+ 
+ The Python Code to create gram2prob.csv was taken from Nick Brosowsky's commit written in R code to Entropy Typing:
   https://github.com/CrumpLab/EntropyTyping/pull/22
   
-  The letter frequency code was taken from Peter Norvig's website: https://norvig.com/mayzner.html
+  The letter frequencies used to calculate the probability charts was taken from Peter Norvig's website: https://norvig.com/mayzner.html
+
