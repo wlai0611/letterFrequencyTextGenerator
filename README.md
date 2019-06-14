@@ -13,3 +13,6 @@ If you put in (10,2) you get 10 words of bigram structure:
 If you put in (10,3) you get 10 words of trigram structure:
       'EN', 'RAID', 'RESKING', 'EXCHANING', 'E', 'CAPARING', 'UNLICATE',
        'PROPERES', 'RECASSY', 'MAY'    A lot of 'ING' because this is a common trio in English.
+
+
+ProbChartPreparer is the code that was used to make the charts that the textGenerator function uses to create the text
