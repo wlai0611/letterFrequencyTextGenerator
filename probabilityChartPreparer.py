@@ -214,7 +214,10 @@ copyIndex=copyIndex.tolist()
 copyIndex[gramNprob.index.isnull().tolist().index(True)]="NULL"
 gramNprob = gramNprob.set_index(np.array(copyIndex))
 gramNprob=gramNprob.sort_index()
-gramNprob.to_csv("gram4prob.csv")
+nMin1 = gramNprob.nMin1
+gramNprob=gramNprob.iloc[:,7:28]
+gramNprob["nMin1"]=nMin1
+gramNprob.to_csv("gram4probability.csv")
 #look we need to first in the original index set the 'nan' to NULL
 #if we simply added nMin1 to the list it would be correct because 
 

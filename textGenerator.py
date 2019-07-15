@@ -26,7 +26,7 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     #look we have 
     gram3prob=pd.read_csv(file,sep=',',index_col=0)
     gram3prob.loc[gram3prob['nMin1'].isnull(),'nMin1']='NA'
-    file='gram4prob.csv'
+    file='gram4probability.csv'
     gram4prob=pd.read_csv(file,sep=',',index_col=0)
     #gram3prob.to_csv('gram3prob.csv')
     #NAindexes=gram3prob[gram3prob['nMin1'].isnull()].index
