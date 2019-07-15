@@ -1,6 +1,8 @@
 # letterFrequencyTextGenerator 
-The function frequencyTextGenerator will create array of English like text.  
-First argument is number of words returned.  10 is default.  Second argument determines how much previous letters influence what will be the next letter.  You can only choose 1,2 or 3.  The higher it is the more English like, the lower the more random unstructured.  1 or unigram means text is structured where the next letter is typed independently of previous letters.  2 or bigrams means only the immediately previous letter influences next letter.  3 or Trigrams means that the previous 2 letters influence next letter.  3 is default.  
+The function frequencyTextGenerator will create array of English like text.  frequencyTextGenerator is found in textGenerator.py
+First argument is number of words returned.  10 is default.  Second argument determines how much previous letters influence what will be the next letter.  You can only choose 1,2, 3 or 4.  The higher it is the more English like, the lower the more random unstructured.  1 or unigram means text is structured where the next letter is typed independently of previous letters.  2 or bigrams means only the immediately previous letter influences next letter.  3 or Trigrams means that the previous 2 letters influence next letter.
+4 or Quadgrams means that the previous 3 letters influence next letter.
+3 is default.  
 EXAMPLES:
 
 If you put in (10,1) you get 10 words of Unigram structure:
