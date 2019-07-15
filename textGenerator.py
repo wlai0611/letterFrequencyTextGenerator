@@ -5,12 +5,12 @@ Created on Tue Jun 11 10:13:08 2019
 @author: Walt
 """
 def frequencyTextGenerator(numberWords=10,gramLevel=3):
-    """ Returns array of English-like text.  First argument is number of words returned.  10 is default.  Second argument determines how much previous letters influence what will be the next letter.  You can choose 1,2,3 or 4.  The higher it is the more English like, the lower the more random unstructured.  1 or unigram means text is structured where the next letter is typed independently of previous letters.  2 or bigrams means only the immediately previous letter influences next letter.  3 or Trigrams means that the previous 2 letters influence next letter and 4 means previous 3 letters influence next letter.  3 is default.  """
+    """ Returns array of English-like text.  First argument is number of words returned.  10 is default.  Second argument determines how much previous letters influence what will be the next letter.  You can choose 1,2 or 3.  The higher it is the more English like, the lower the more random unstructured.  1 or unigram means text is structured where the next letter is typed independently of previous letters.  2 or bigrams means only the immediately previous letter influences next letter.  3 or Trigrams means that the previous 2 letters influence next letter.  3 is default.  """
     
     import pandas as pd
     
     import numpy as np
-    if gramLevel>4:
+    if gramLevel>3:
         raise ValueError('The Second Argument must be 1,2 or 3.  3 represents trigram level English and is the highest author has calculated so far.')
     #os.chdir(r'C:\Users\Walt\Desktop\CognitionLab\letterFrequencyTextGenerator')
     # break up letters into they are a lsit, HOW TO ADD STUFF OT LIST?
@@ -26,8 +26,8 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     #look we have 
     gram3prob=pd.read_csv(file,sep=',',index_col=0)
     gram3prob.loc[gram3prob['nMin1'].isnull(),'nMin1']='NA'
-    file='gram4probability.csv'
-    gram4prob=pd.read_csv(file,sep=',',index_col=0)
+ #   file='gram4probability.csv'
+  #  gram4prob=pd.read_csv(file,sep=',',index_col=0)
     #gram3prob.to_csv('gram3prob.csv')
     #NAindexes=gram3prob[gram3prob['nMin1'].isnull()].index
     #gram3prob.loc[NAindexes,'nMin1']
@@ -76,8 +76,8 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
         columnToTable[key]=gram2prob
     for key in gram3prob.columns.values[8:-17]:    
         columnToTable[key]=gram3prob
-    for key in gram4prob.columns.values:
-        columnToTable[key]=gram4prob
+ #   for key in gram4prob.columns.values:
+  #      columnToTable[key]=gram4prob
     #repeat for gram3prob and after we shoul
     # now get me the columns manually from length
         
