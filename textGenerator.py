@@ -10,8 +10,8 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     import pandas as pd
     
     import numpy as np
-    if gramLevel>3:
-        raise ValueError('The Second Argument must be 1,2 or 3.  3 represents trigram level English and is the highest author has calculated so far.')
+ #   if gramLevel>3:
+ #       raise ValueError('The Second Argument must be 1,2 or 3.  3 represents trigram level English and is the highest author has calculated so far.')
     #os.chdir(r'C:\Users\Walt\Desktop\CognitionLab\letterFrequencyTextGenerator')
     # break up letters into they are a lsit, HOW TO ADD STUFF OT LIST?
     letters=['A','B','C','D','E','F','G','H','I','J','K',
@@ -26,6 +26,8 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     #look we have 
     gram3prob=pd.read_csv(file,sep=',',index_col=0)
     gram3prob.loc[gram3prob['nMin1'].isnull(),'nMin1']='NA'
+    file='gram4prob.csv'
+    gram4prob=pd.read_csv(file,sep=',',index_col=0)
     #gram3prob.to_csv('gram3prob.csv')
     #NAindexes=gram3prob[gram3prob['nMin1'].isnull()].index
     #gram3prob.loc[NAindexes,'nMin1']
@@ -35,7 +37,7 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     #so lets say length 3 gram 2
     
     
-    
+    ######## FOR GIVEN GRAM LEVEL, MAP WORD LENGTH TO COLUMN LIST
         #so over here we must increase both posn and start which needs to be a variable
         #we will keep incrementing posn so it iwll end  
     lengthColumn={}
@@ -60,7 +62,7 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
     #lets be rational here we will need to inefficiently create this thing
     # so lets make a for loop 
     # lets bring in all the gramprobs charts first
-    
+   ######### MAP COLUMN LIST TO PROBABILITY TABLE 
     #ok we got all of em now lets loop through each column for gram1prob
     #and make a dictionary
     #empty dictionary
@@ -74,6 +76,8 @@ def frequencyTextGenerator(numberWords=10,gramLevel=3):
         columnToTable[key]=gram2prob
     for key in gram3prob.columns.values[8:-17]:    
         columnToTable[key]=gram3prob
+    for key in gram4prob.columns.values:
+        columnToTable[key]=gram4prob
     #repeat for gram3prob and after we shoul
     # now get me the columns manually from length
         
